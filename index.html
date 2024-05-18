@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задачі</title>
+  </head>
+  <body>
+    <div
+      id="task1"
+      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
+    >
+      <h2>Завдання 1</h2>
+      <input type="number" id="num1" placeholder="Перше число" />
+      <input type="number" id="num2" placeholder="Друге число" />
+      <button onclick="task1()">Знайти більше число</button>
+      <p id="result1"></p>
+    </div>
+
+    <div
+      id="task2"
+      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
+    >
+      <h2>Завдання 2</h2>
+      <input type="number" id="birthYear" placeholder="Рік народження" />
+      <button onclick="task2()">Розрахувати вік</button>
+      <p id="result2"></p>
+    </div>
+
+    <div
+      id="task3"
+      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
+    >
+      <h2>Завдання 3</h2>
+      <input
+        type="number"
+        id="dayOfWeek"
+        min="1"
+        max="7"
+        placeholder="День тижня (1-7)"
+      />
+      <button onclick="task3()">Знайти назву дня</button>
+      <p id="result3"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
