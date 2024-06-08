@@ -3,44 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Задачі</title>
+    <title>JAVASCRIPT</title>
   </head>
   <body>
-    <div
-      id="task1"
-      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
-    >
-      <h2>Завдання 1</h2>
-      <input type="number" id="num1" placeholder="Перше число" />
-      <input type="number" id="num2" placeholder="Друге число" />
-      <button onclick="task1()">Знайти більше число</button>
-      <p id="result1"></p>
+    <div class="task">
+      <h1>Lesson 19</h1>
+      <h1>Завдання 1: Витрати за минулий місяць</h1>
+      <form id="expensesForm">
+        <label for="numCategories">Кількість категорій витрат:</label>
+        <input
+          type="number"
+          id="numCategories"
+          name="numCategories"
+          min="1"
+          required
+        />
+        <button type="button" onclick="getCategories()">Далі</button>
+      </form>
+      <div id="categoriesForm"></div>
     </div>
 
-    <div
-      id="task2"
-      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
-    >
-      <h2>Завдання 2</h2>
-      <input type="number" id="birthYear" placeholder="Рік народження" />
-      <button onclick="task2()">Розрахувати вік</button>
-      <p id="result2"></p>
+    <div class="task">
+      <h1>Завдання 2: Виведення непарних чисел</h1>
+      <form id="rangeForm">
+        <label for="startNumber">Початкове число (a):</label>
+        <input type="number" id="startNumber" name="startNumber" required />
+        <label for="endNumber">Кінцеве число (b):</label>
+        <input type="number" id="endNumber" name="endNumber" required />
+        <button type="button" onclick="rangeNumbers()">
+          Показати непарні числа
+        </button>
+      </form>
+      <div id="result"></div>
+    </div>
+    <div class="task">
+      <h1>Lesson 20</h1>
+      <h1>Завдання 1: Сума елементів масиву</h1>
+      <form id="arraySumForm">
+        <label for="arrayInput">Введіть елементи масиву через кому:</label>
+        <input type="text" id="arrayInput" name="arrayInput" required />
+        <button type="button" onclick="calculateArraySum()">
+          Порахувати суму
+        </button>
+      </form>
+      <div id="arraySumResult"></div>
     </div>
 
-    <div
-      id="task3"
-      style="border: 1px solid black; padding: 10px; margin-bottom: 20px"
-    >
-      <h2>Завдання 3</h2>
-      <input
-        type="number"
-        id="dayOfWeek"
-        min="1"
-        max="7"
-        placeholder="День тижня (1-7)"
-      />
-      <button onclick="task3()">Знайти назву дня</button>
-      <p id="result3"></p>
+    <div class="task">
+      <h1>Завдання 2: Сортування чисел</h1>
+      <form id="sortNumbersForm">
+        <label for="numbersInput">Введіть числа через кому:</label>
+        <input type="text" id="numbersInput" name="numbersInput" required />
+        <button type="button" onclick="sortNumbers()">Відсортувати</button>
+      </form>
+      <div id="sortedNumbersResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Завдання 3: Найбільше/найменше число в масиві</h1>
+      <form id="minMaxForm">
+        <label for="minMaxArrayInput"
+          >Введіть елементи масиву через кому:</label
+        >
+        <input
+          type="text"
+          id="minMaxArrayInput"
+          name="minMaxArrayInput"
+          required
+        />
+        <button type="button" onclick="findMinMax()">
+          Знайти найбільше і найменше
+        </button>
+      </form>
+      <div id="minMaxResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Lesson 21</h1>
+      <h1>Завдання 1: Перевірка елемента в масиві</h1>
+      <form id="containsElementForm">
+        <label for="arrayInput1">Введіть елементи масиву через кому:</label>
+        <input type="text" id="arrayInput1" name="arrayInput1" required />
+        <label for="elementInput">Введіть елемент для перевірки:</label>
+        <input type="text" id="elementInput" name="elementInput" required />
+        <button type="button" onclick="containsElement()">Перевірити</button>
+      </form>
+      <div id="containsElementResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Завдання 2: Пошук першого негативного елемента</h1>
+      <form id="findFirstNegativeForm">
+        <label for="arrayInput2">Введіть елементи масиву через кому:</label>
+        <input type="text" id="arrayInput2" name="arrayInput2" required />
+        <button type="button" onclick="findFirstNegative()">Знайти</button>
+      </form>
+      <div id="findFirstNegativeResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Завдання 3: Підрахунок парних чисел у масиві</h1>
+      <form id="countEvenNumbersForm">
+        <label for="arrayInput3">Введіть елементи масиву через кому:</label>
+        <input type="text" id="arrayInput3" name="arrayInput3" required />
+        <button type="button" onclick="countEvenNumbers()">Порахувати</button>
+      </form>
+      <div id="countEvenNumbersResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Lesson 22</h1>
+      <h1>Завдання 1: Обрізка рядка</h1>
+      <form id="trimStringForm">
+        <label for="stringInput">Введіть рядок:</label>
+        <input type="text" id="stringInput" name="stringInput" required />
+        <label for="maxlengthInput">Максимальна довжина:</label>
+        <input
+          type="number"
+          id="maxlengthInput"
+          name="maxlengthInput"
+          required
+        />
+        <button type="button" onclick="trimString()">Обрізати</button>
+      </form>
+      <div id="trimStringResult"></div>
+    </div>
+
+    <div class="task">
+      <h1>Завдання 2: Підрахунок кількості входжень слова</h1>
+      <p>Введіть рядок:</p>
+      <textarea id="inputString" rows="4" cols="50"></textarea>
+      <p>Введіть слово для пошуку:</p>
+      <input type="text" id="searchWord" />
+      <button onclick="countWordOccurrences()">Підрахувати</button>
+      <p id="result"></p>
     </div>
 
     <script src="script.js"></script>
